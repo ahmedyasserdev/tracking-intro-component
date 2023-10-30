@@ -1,0 +1,111 @@
+header {
+  padding-top: 2rem;
+  position: relative;
+}
+
+.list {
+  @media (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+
+.list-item {
+  color: $dark-grayish-blue;
+
+  &.login {
+    color: $grayish-blue;
+  }
+
+  @media (min-width: $desktop) {
+    &.login {
+      margin-left: 2rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: $grayish-blue;
+        display: inline-block;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+      }
+    }
+  }
+
+  transition: 100ms ease;
+  font-size: 2rem;
+  text-transform: uppercase;
+  -webkit-transition: 100ms ease;
+  -moz-transition: 100ms ease;
+  -ms-transition: 100ms ease;
+  -o-transition: 100ms ease;
+  position: relative;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: $mobile) {
+  li:not(:last-child) {
+    padding-bottom: 20px;
+  }
+
+  li:last-child {
+    border-top: 2px solid $grayish-blue;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 80%;
+    margin-top: 20px;
+    transform: translate(-50%, -1000%);
+    background-color: white;
+    -webkit-transform: translate(-50%, -1000%);
+    -moz-transform: translate(-50%, -1000%);
+    -ms-transform: translate(-50%, -1000%);
+    -o-transform: translate(-50%, -1000%);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    transition: 500ms ease;
+    -moz-transition: 500ms ease;
+    -ms-transition: 500ms ease;
+    -o-transition: 500ms ease;
+    -webkit-transition: 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    &.show {
+      transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
