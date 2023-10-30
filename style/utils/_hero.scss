@@ -1,15 +1,18 @@
 .hero {
-    @media(min-width : $desktop ) {
-    position: relative;
-}
+        position: relative;
 
-    .row {
-        
-        @media(max-width : $mobile ) {
+
+    @media(max-width : $mobile ) {
+        .row {
             flex-direction: column-reverse;
             gap: 80px;
         }
+
+        .container {
+            width: 100%;
+        }
     }
+
 
     .content {
         .top-content {
@@ -43,13 +46,15 @@
 
 
     .image-wrapper {
-   
+       
+
         @media(min-width : $desktop ) {
             position: absolute;
             right: -150px;
             width: 60%;
 
         }
-      
+
     }
+
 }

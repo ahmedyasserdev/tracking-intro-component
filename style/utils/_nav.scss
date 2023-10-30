@@ -5,7 +5,6 @@ header {
 }
 
 .list {
-
   @media (min-width: $desktop) {
     display: flex;
     align-items: center;
@@ -21,13 +20,9 @@ header {
       position: absolute;
       z-index: -1000;
       border-radius: 100px;
-      -webkit-border-radius: 100px;
-      -moz-border-radius: 100px;
-      -ms-border-radius: 100px;
-      -o-border-radius: 100px;
-      left: -70px ;
+      left: -70px;
       padding: 12rem;
-}
+    }
 
   }
 
@@ -52,14 +47,7 @@ header {
         background-color: $grayish-blue;
         display: inline-block;
         border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
+
         margin-left: 2rem;
 
       }
@@ -74,11 +62,27 @@ header {
   &:hover {
     text-decoration: underline;
   }
+
+
+
+  @media (max-width: $mobile) {
+    li:not(:last-child) {
+      padding-bottom: 20px;
+    }
+
+    li:last-child {
+      border-top: 2px solid $grayish-blue;
+      padding-top: 10px;
+    }
+  }
+
+
 }
 
 @media (max-width: $mobile) {
   .nav {
     position: absolute;
+    z-index: 100000;
     top: 100%;
     left: 50%;
     width: 80%;
@@ -95,18 +99,3 @@ header {
     }
   }
 }
-
-
-
-@media (max-width: $mobile) {
-  li:not(:last-child) {
-    padding-bottom: 20px;
-  }
-
-  li:last-child {
-    border-top: 2px solid $grayish-blue;
-    padding-top: 10px;
-  }
-}
-
-
