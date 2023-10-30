@@ -1,0 +1,55 @@
+.hero {
+    @media(min-width : $desktop ) {
+    position: relative;
+}
+
+    .row {
+        
+        @media(max-width : $mobile ) {
+            flex-direction: column-reverse;
+            gap: 80px;
+        }
+    }
+
+    .content {
+        .top-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            p {
+                text-transform: capitalize;
+                letter-spacing: 5px;
+            }
+        }
+
+        .info {
+            h1 {
+                color: $very-dark-blue ;
+                font-size: 6rem;
+                text-transform: capitalize;
+                margin-block: 1.5rem;
+
+            }
+        }
+
+        .cta {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 3rem;
+        }
+    }
+
+
+    .image-wrapper {
+   
+        @media(min-width : $desktop ) {
+            position: absolute;
+            right: -150px;
+            width: 60%;
+
+        }
+      
+    }
+}
